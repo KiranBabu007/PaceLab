@@ -8,7 +8,7 @@ import Spline from '@splinetool/react-spline/next';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-purple-900  text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       <div className="container mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Left Content */}
@@ -34,7 +34,7 @@ const LandingPage = () => {
           </div>
 
           {/* Right Spline Animation */}
-          <div className="absolute top-0 right-0 w-full h-full  lg:relative lg:w-auto">
+          <div className="absolute top-0 right-0 w-full h-full lg:relative lg:w-auto">
             <Spline
               className="w-full h-full"
               scene="https://prod.spline.design/URoJ2YAeymxF5fJr/scene.splinecode"
