@@ -14,7 +14,7 @@ const LandingPage = () => {
           </h2>
           
           <h1 className="text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-            India's Largest <span className="text-blue-400">Internship</span> Programme!
+            India&apos;s Largest <span className="text-blue-400">Internship</span> Programme!
           </h1>
           
           
