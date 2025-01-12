@@ -18,7 +18,7 @@ const LandingPage = () => {
             
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
-                India's Largest{' '}
+                India&apos;s Largest{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   Internship
                 </span>{' '}
@@ -26,7 +26,7 @@ const LandingPage = () => {
               </h1>
               
               <p className="text-gray-400 text-lg max-w-xl">
-                Join thousands of students in India's premier internship program and kickstart your career journey today.
+                Join thousands of students in India&apos;s premier internship program and kickstart your career journey today.
               </p>
             </div>
 
