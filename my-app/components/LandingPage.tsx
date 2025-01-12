@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import SplineLap from './spline';
+
 
 
 const LandingPage = () => {
@@ -24,6 +26,10 @@ const LandingPage = () => {
           >
             Book Your Seat
           </Button>
+        </div>
+
+        <div>
+            <SplineLap />
         </div>
       </main>
     </div>
