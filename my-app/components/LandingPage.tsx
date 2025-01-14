@@ -1,11 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { ChevronRight, Users, Trophy, Calendar } from "lucide-react";
+
 import BookingCounter from './counter';
-import DotPattern from './ui/dot-pattern';
-import { cn } from '@/lib/utils';
+
 import ShinyButton from "@/components/ui/shiny-button";
 import Image from 'next/image';
 
