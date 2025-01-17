@@ -30,7 +30,7 @@ const LandingPage = () => {
         <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 px-4 sm:px-6">
           <div className="lg:w-1/2 space-y-6 text-center lg:text-left pt-16 sm:pt-20 lg:pt-0">
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-6xl lg:text-7xl font-bold tracking-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
                 India&apos;s Largest{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   Internship
