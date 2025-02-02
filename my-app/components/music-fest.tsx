@@ -33,7 +33,7 @@ const MusicFestPage = () => {
 
             <p className="text-lg leading-relaxed opacity-90">
               From the streets of Fort Kochi to the vibrant cafes of MG Road,
-              Kochi's music scene is as diverse as its culture. Get ready to
+              Kochi&apos;s music scene is as diverse as its culture. Get ready to
               groove to the rhythm of the city with an eclectic mix of sounds
               and styles.
             </p>
@@ -48,19 +48,13 @@ const MusicFestPage = () => {
               </div>
 
               <div className="space-y-1">
-                <h3 className="text-xl font-semibold">'Kochi Jam Sessions 2024:</h3>
-                <p className="text-lg">Where Music Comes Alive!'</p>
+                <h3 className="text-xl font-semibold">Kochi Jam Sessions 2024:</h3>
+                <p className="text-lg">Where Music Comes Alive!</p>
               </div>
             </div>
 
-            {/* Logo */}
-            <div className="pt-8">
-              <img 
-                src="/api/placeholder/200/50" 
-                alt="PACELAB" 
-                className="opacity-80"
-              />
-            </div>
+         
+           
           </div>
 
           {/* Right side image */}

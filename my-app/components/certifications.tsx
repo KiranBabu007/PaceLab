@@ -89,7 +89,7 @@ const CertificationPage = () => {
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed font-mono">
               Elevate your career with internationally recognized certification 
-              from IIT Bombay. Our partnership with India's premier technology 
+              from IIT Bombay. Our partnership with India&apos;s premier technology 
               institute ensures world-class curriculum standards and industry-relevant 
               skills validation.
             </p>
