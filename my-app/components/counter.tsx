@@ -41,9 +41,7 @@ export default function BookingCounter() {
         </span>
         <span className="text-2xl font-bold text-gray-400">+</span>
       </div>
-      <p className="text-lg font-mono font-semibold mt-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-400 to-gray-200">
-        Already Booked
-      </p>
+      
     </div>
   )
 }

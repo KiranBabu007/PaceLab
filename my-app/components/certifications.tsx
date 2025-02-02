@@ -128,7 +128,7 @@ const CertificationPage = () => {
             className="z-1"
               items={testimonials}
               direction="right"
-              speed="normal"
+              speed="slow"
             />
       </div>
 
