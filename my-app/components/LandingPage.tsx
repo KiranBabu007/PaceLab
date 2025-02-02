@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen text-white md:bg-transparent sm:bg-gradient-to-r sm:from-black">
+    <div className="h-screen text-white md:bg-transparent sm:bg-gradient-to-r sm:from-black">
       <div className="absolute inset-0 bg-black lg:bg-transparent sm:bg-gradient-to-r sm:from-black">
         <Image
           src="/robo.jpg"
