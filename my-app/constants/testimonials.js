@@ -1,33 +1,34 @@
 const testimonials = [
-    {
-      quote:
-        "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-      name: "Charles Dickens",
-      title: "A Tale of Two Cities",
-    },
-    {
-      quote:
-        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-      name: "William Shakespeare",
-      title: "Hamlet",
-    },
-    {
-      quote: "All that we see or seem is but a dream within a dream.",
-      name: "Edgar Allan Poe",
-      title: "A Dream Within a Dream",
-    },
-    {
-      quote:
-        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-      name: "Jane Austen",
-      title: "Pride and Prejudice",
-    },
-    {
-      quote:
-        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-      name: "Herman Melville",
-      title: "Moby-Dick",
-    },
-  ];
+  {
+    quote: "I thoroughly enjoyed my internship in PACELAB and now have very valuable experience under my belt. I know this will help me when looking for jobs. Thanks a lot to the whole team @pacelab for giving this skill and opportunity",
+    name: "Samson Mathew",
+    title: "Intern",
+    
+  },
+  {
+    quote: "Im glad to be here and i just want to appreciate pace lab internship program and the entire crew.It was very helpful sessions. Big thanks for the patience and commitment towards the students like us",
+    name: "ABIN V.A",
+    title: "Intern",
+    
+  },
+  {
+    quote: "An organisation that has imprinted their own footprints in the profession of technical training. Experienced technical staffs and training officers who are capable in handling workshops and hands-on sessions in an effective manner. Nice experience with them.",
+    name: "Dr. Jayadevan R",
+    title: "Reviewer",
+    
+  },
+  {
+    quote: "I had a wonderful experience on their one week internship.I was able to gain more knowledge. The trainers were well talented and informative. The internship actually developed skills and they are very supportive.",
+    name: "ADITHYA A",
+    title: "Intern",
+    
+  },
+  {
+    quote: "About a week ago, I had the incredible opportunity to attend Pace Labs' invigorating internship course alongside my group of friends. Every moment was a thrilling adventure. The engaging and interactive sessions left us all buzzing with excitement. The immersive hands-on VR experience ignited a newfound passion within some of us. With heartfelt gratitude, I extend my sincerest thanks to Pace Labs for bestowing upon us this unforgettable and enriching opportunity.",
+    name: "Fayaz Muhammed",
+    title: "Local Guide",
+    
+  }
+];
 
-  export default testimonials
+export default testimonials;

@@ -1,73 +1,43 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
 
 const MusicFestPage = () => {
   return (
-    <div className="min-h-screen  bg-gradient-to-br from-purple-950 via-black to-purple-950 text-white p-8">
+    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-black to-purple-950 text-white p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <header className="flex items-center gap-4 mb-12">
-          
-        <Image
-                  src="/music.png"
-                  alt="music logo"
-                  width={100}
-                  height={50}
-                  className="object-contain"
-                />
-          <h1 className="text-4xl font-bold">MUSIC FEST</h1>
+          <Image
+            src="/music.png"
+            alt="Music Fest Logo"
+            width={100}
+            height={50}
+            className="object-contain"
+          />
+          <h1 className="text-4xl font-bold">Music Fest 2024</h1>
         </header>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-semibold">JAMMING SESSION!</h2>
-              
-              <p className="text-xl leading-relaxed">
-                Join us for an unforgettable musical experience as Kochi plays
-                host to a series of electrifying <span className="font-semibold">jam sessions</span> featuring the <span className="font-semibold">best
-                artists</span> from across Kerala!
-              </p>
-            </div>
+        <div className="space-y-8">
+          <h2 className="text-3xl font-semibold">A Celebration of Music</h2>
+          <p className="text-lg leading-relaxed opacity-90">
+            The Music Fest 2024 was an unforgettable experience that brought together artists and music lovers 
+            from all over Kerala. Held in Kochi on <span className="font-semibold">July 11, 2024</span>, the event showcased diverse musical performances 
+            that resonated with the city's vibrant culture.
+          </p>
 
-            <p className="text-lg leading-relaxed opacity-90">
-              From the streets of Fort Kochi to the vibrant cafes of MG Road,
-              Kochi&apos;s music scene is as diverse as its culture. Get ready to
-              groove to the rhythm of the city with an eclectic mix of sounds
-              and styles.
-            </p>
+          <p className="text-lg leading-relaxed opacity-90">
+            From the historic streets of Fort Kochi to the energetic cafes of MG Road, the festival embraced a 
+            variety of sounds and styles. Attendees enjoyed mesmerizing performances, spontaneous jam sessions, 
+            and an atmosphere filled with passion for music.
+          </p>
 
-            <div className="space-y-2">
-              <div className="flex items-baseline gap-4">
-                <div className="space-y-1">
-                  <span className="text-5xl font-bold">11</span>
-                  <span className="text-2xl font-semibold block">JULY</span>
-                  <span className="text-xl">2024</span>
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <h3 className="text-xl font-semibold">Kochi Jam Sessions 2024:</h3>
-                <p className="text-lg">Where Music Comes Alive!</p>
-              </div>
-            </div>
-
-         
-           
-          </div>
-
-          {/* Right side image */}
-          <div className="relative">
-            <div className="absolute top-0 right-0 w-32 h-32 text-purple-400 opacity-50">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <path d="M50,3 L63,38 L98,38 L70,61 L80,96 L50,75 L20,96 L30,61 L2,38 L37,38 Z" fill="currentColor"/>
-              </svg>
-            </div>
-           
-              
-            
-          </div>
+          <p className="text-lg leading-relaxed opacity-90">
+            As the echoes of the festival fade, the memories remain—music, connection, and the joy of shared experiences.
+            The Music Fest 2024 was more than an event; it was a testament to the unifying power of music.
+          </p>
         </div>
       </div>
     </div>
