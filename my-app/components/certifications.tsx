@@ -71,7 +71,7 @@ const CertificationPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col lg:flex-row-reverse items-center justify-between gap-6 min-h-[50vh]"
+          className="flex flex-col lg:flex-row-reverse items-center justify-between gap-3 "
         >
           {/* IIT Content */}
           <motion.div 
