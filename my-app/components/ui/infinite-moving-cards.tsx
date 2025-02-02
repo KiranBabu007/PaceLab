@@ -41,7 +41,7 @@ export const InfiniteMovingCards = ({
     }
   }
     addAnimation();
-  },[]);
+  });
   const [start, setStart] = useState(false);
   
   const getDirection = () => {
