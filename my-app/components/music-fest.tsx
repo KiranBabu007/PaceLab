@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const MusicFestPage = () => {
@@ -6,9 +7,14 @@ const MusicFestPage = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <header className="flex items-center gap-4 mb-12">
-          <div className="bg-white rounded-full p-4">
-            <div className="w-8 h-12 bg-purple-900 rounded-lg" />
-          </div>
+          
+        <Image
+                  src="/music.png"
+                  alt="music logo"
+                  width={100}
+                  height={50}
+                  className="object-contain"
+                />
           <h1 className="text-4xl font-bold">MUSIC FEST</h1>
         </header>
 
@@ -64,14 +70,9 @@ const MusicFestPage = () => {
                 <path d="M50,3 L63,38 L98,38 L70,61 L80,96 L50,75 L20,96 L30,61 L2,38 L37,38 Z" fill="currentColor"/>
               </svg>
             </div>
-            <div className="relative">
-              <img
-                src="/api/placeholder/500/600"
-                alt="Musician with guitar"
-                className="w-full object-cover rounded-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-purple-900/20" />
-            </div>
+           
+              
+            
           </div>
         </div>
       </div>
