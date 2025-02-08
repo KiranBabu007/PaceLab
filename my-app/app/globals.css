@@ -12,9 +12,24 @@ body {
   }
 }
 
-.animate-scroll {
-  animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50%));
+  }
 }
+
+.animate-scroll {
+  animation: scroll 200s linear infinite; /* Increased from default to 60s */
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

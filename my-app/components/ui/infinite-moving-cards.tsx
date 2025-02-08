@@ -1,122 +1,75 @@
-"use client";
+import React from 'react';
 
-import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
+interface Testimonial {
+  quote: string;
+  name: string;
+  title: string;
+}
 
-export const InfiniteMovingCards = ({
-  items,
-  direction = "left",
-  speed = "fast",
-  pauseOnHover = true,
-  className,
-}: {
-  items: {
-    quote: string;
-    name: string;
-    title: string;
-  }[];
-  direction?: "left" | "right";
-  speed?: "fast" | "normal" | "slow";
-  pauseOnHover?: boolean;
-  className?: string;
-}) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
+interface Props {
+  testimonials: Testimonial[];
+}
 
-  useEffect(() => {
-    function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
-
-      getDirection();
-      getSpeed();
-      setStart(true);
-    }
-  }
-    addAnimation();
-  });
-  const [start, setStart] = useState(false);
-  
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
-      }
-    }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
+const InfiniteMovingCards: React.FC<Props> = ({ testimonials }) => {
   return (
-    <div
-      ref={containerRef}
-      className={cn(
-        "scroller relative z-30 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className
-      )}
-    >
-      <ul
-        ref={scrollerRef}
-        className={cn(
-          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]"
-        )}
-      >
-        {items.map((item) => (
-          <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-purple-500/20 flex-shrink-0 px-8 py-6 md:w-[450px]"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(76,29,149,0.75) 100%)",
-            }}
-            key={item.name}
-          >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <span className="relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
-                {item.quote}
-              </span>
-              <div className="relative z-20 mt-4 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] text-purple-300 font-medium">
-                    {item.name}
-                  </span>
-                  <span className="text-xs leading-[1.6] text-gray-400 font-normal">
-                    {item.title}
-                  </span>
-                </span>
+    <section className="py-12 bg-transparent sm:py-16 lg:py-20 overflow-hidden">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center">
+          <div className="text-center">
+            <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
+              Our Students Speak
+            </h2>
+          </div>
+
+          <div className="relative mt-10 md:mt-24">
+            {/* Gradient Overlays */}
+            <div className="absolute left-0 top-0 bg-gradient-to-r from-black/90 to-transparent w-40 h-full z-10" />
+            <div className="absolute right-0 top-0 bg-gradient-to-l from-black/90 to-transparent w-40 h-full z-10" />
+            
+            {/* Sliding Container */}
+            <div className="flex gap-8 overflow-hidden">
+              <div className="flex animate-scroll hover:pause gap-8 min-w-full">
+                {[...testimonials, ...testimonials, ...testimonials,...testimonials].map((item, idx) => (
+                  <div 
+                    key={idx} 
+                    className="flex-shrink-0 w-[450px] p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-purple-500/10 transition-all duration-300 hover:bg-white/20"
+                  >
+                    <blockquote className="relative">
+                      <div className="flex items-center mb-6">
+                        {[...Array(5)].map((_, i) => (
+                          <svg 
+                            key={i}
+                            className="w-5 h-5 text-yellow-500" 
+                            fill="currentColor" 
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <p className="text-lg leading-relaxed text-gray-200 mb-6 line-clamp-4">
+                        {item.quote}
+                      </p>
+                      <div className="flex items-center">
+                        <div>
+                          <p className="text-base font-semibold text-purple-300">
+                            {item.name}
+                          </p>
+                          <p className="mt-0.5 text-sm text-gray-400">
+                            {item.title}
+                          </p>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                ))}
               </div>
-            </blockquote>
-          </li>
-        ))}
-      </ul>
-    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
+
+export default InfiniteMovingCards;

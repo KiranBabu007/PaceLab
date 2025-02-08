@@ -7,42 +7,55 @@ import Image from 'next/image';
 
 const LandingPage = () => {
   return (
-    <div className="h-screen text-white md:bg-transparent sm:bg-gradient-to-r sm:from-black">
-      <div className="absolute inset-0 bg-black lg:bg-transparent sm:bg-gradient-to-r sm:from-black">
+    <div className="h-screen  relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-black/40 z-10" />
         <Image
           src="/robo.jpg"
           alt="Background"
           fill
-          className="object-cover -z-10"
+          className="object-cover object-center"
           priority 
         />
       </div>
-      <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-50">
+
+      {/* Logo */}
+      <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20">
         <Image
           src="/Pacelab.png"
           alt="PaceLab Logo"
-          width={150}
-          height={75}
-          className="object-contain"
+          width={100}
+          height={50}
+          className="w-24 sm:w-32 md:w-40 h-auto object-contain"
         />
       </div>
-      <div className="container mx-auto px-4 sm:px-8 py-8 relative">
-        <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 px-4 sm:px-6">
-          <div className="lg:w-1/2 space-y-6 text-center lg:text-left pt-16 sm:pt-20 lg:pt-0">
+
+      {/* Main Content */}
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 space-y-6 md:space-y-8 text-center lg:text-left pt-24 sm:pt-32 lg:pt-0">
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white">
                 India&apos;s Largest{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   Internship
                 </span>{' '}
                 Programme!
               </h1>
-              <p className="text-gray-400 text-base sm:text-lg max-w-xl font-mono">
+              <p className="text-gray-300 text-sm sm:text-base lg:text-lg max-w-xl mx-auto lg:mx-0 font-mono">
                 Join thousands of students in India&apos;s premier internship program and kickstart your career journey today.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+
+            {/* CTA Section */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
               <ShinyButton className='
+                w-full 
+                sm:w-auto 
+                px-8 
+                py-3
                 bg-gradient-to-r 
                 from-gray-300 
                 via-gray-100 
@@ -52,36 +65,25 @@ const LandingPage = () => {
                 text-gray-800
                 border
                 border-gray-200
-                mr-0 sm:mr-5
                 transition-all 
                 duration-300
                 hover:scale-105
                 hover:shadow-xl
                 hover:shadow-white/20
-                hover:from-gray-100
-                hover:via-white
-                hover:to-gray-100
                 relative
                 overflow-hidden
-                after:absolute
-                after:inset-0
-                after:bg-gradient-to-r
-                after:from-transparent
-                after:via-white/40
-                after:to-transparent
-                after:animate-shimmer
-                after:hover:opacity-75
               '>
                 Book your seats
               </ShinyButton>
-              <div>
+              <div className="w-full sm:w-auto">
                 <BookingCounter />
               </div>
             </div>
           </div>
-          {/* Right Content - NFT Animation */}
-          <div className="lg:w-1/2 relative z-10 flex items-center justify-center">
-            <div className="relative w-full max-w-sm aspect-square">
+
+          {/* Right Content */}
+          <div className="w-full lg:w-1/2 relative flex items-center justify-center p-4">
+            <div className="relative w-full max-w-lg aspect-square">
               <div className="absolute -inset-1 rounded-lg blur opacity-20"></div>
               {/* Additional content can go here */}
             </div>

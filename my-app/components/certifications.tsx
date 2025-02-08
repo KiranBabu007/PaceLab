@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import  testimonials  from "@/constants/testimonials";
-import { InfiniteMovingCards } from './ui/infinite-moving-cards';
+import  InfiniteMovingCards  from './ui/infinite-moving-cards';
 
 const CertificationPage = () => {
   return (
@@ -119,17 +119,8 @@ const CertificationPage = () => {
         </motion.div>
       </div>
       <div>
-      <h2 className=" flex justify-center p-10 text-4xl lg:text-5xl font-bold tracking-tight">
-              <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-purple-400 to-purple-800">
-                Testimonials
-              </span>
-            </h2>
-        <InfiniteMovingCards
-            className="z-1"
-              items={testimonials}
-              direction="right"
-              speed="slow"
-            />
+      
+            <InfiniteMovingCards testimonials={testimonials} />
       </div>
 
        
