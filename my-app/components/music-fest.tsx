@@ -25,7 +25,7 @@ const MusicFestPage = () => {
           <p className="text-lg leading-relaxed opacity-90">
             Music Fest 2024 brought together artists and music lovers from across Kerala 
             in Kochi on <span className="font-semibold">July 11, 2024</span>. The event featured 
-            diverse performances that showcased the city's vibrant musical culture.
+            diverse performances that showcased the city&apos;s vibrant musical culture.
           </p>
 
           <p className="text-lg leading-relaxed opacity-90">
