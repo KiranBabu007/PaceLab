@@ -21,19 +21,19 @@ const CertificationPage = () => {
           particleColor="#8B5CF6"
           particleSize={1.5}
           particleDensity={50}
-          className="w-full h-full opacity-80"
+          className="w-full h-full opacity-30"
         />
       </div>
       
-      <TracingBeam >
-        <div className="container space-x-7 relative z-10 space-y-24">
+      <TracingBeam className="w-full">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-24">
           {/* NFT Section */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col lg:flex-row items-center justify-between gap-20" // updated gap here
+            className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-20"
           >
             {/* NFT Content */}
             <motion.div
@@ -72,7 +72,7 @@ const CertificationPage = () => {
               whileHover={{ scale: 1.02, rotate: 1 }}
               whileTap={{ scale: 0.98 }}
             >
-             
+              
               <div className="relative w-full aspect-square max-w-md mx-auto flex justify-center items-center">
                 <Image
                   src="/NFT.gif"
@@ -93,7 +93,7 @@ const CertificationPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col lg:flex-row-reverse items-center justify-between gap-20" // updated gap here
+            className="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 md:gap-12 lg:gap-20"
           >
             {/* IIT Content */}
             <motion.div
@@ -119,7 +119,7 @@ const CertificationPage = () => {
                 Our partnership with India&apos;s premier technology institute ensures world-class curriculum standards.
               </p>
               
-             
+              
             </motion.div>
 
             {/* Certificate Image with Reduced Glow */}
