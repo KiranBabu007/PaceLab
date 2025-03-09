@@ -19,7 +19,7 @@ const JobFair = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-bl from-purple-950 via-black to-purple-950 text-white overflow-hidden py-20">
       {/* Background Effects */}
-      <BackgroundBeams className="opacity-20" />
+     
       <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
