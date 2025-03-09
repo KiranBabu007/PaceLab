@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Spotlight } from './ui/spotlight';
-import { BackgroundBeams } from './ui/background-beams';
 
 const JobFair = () => {
   const companies = [
