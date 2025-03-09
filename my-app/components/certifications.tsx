@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { BackgroundBeams } from './ui/background-beams';
 import { SparklesCore } from './ui/sparkles';
 import { TracingBeam } from './ui/tracing-beam';
 import TestimonialsSection from './TestimonialsSection';
