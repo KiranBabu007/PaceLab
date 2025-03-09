@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const LandingPage = () => {
   return (
-    <div className="h-screen  relative overflow-hidden">
+    <div className="h-screen relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black to-black/40 z-10" />
@@ -21,13 +21,13 @@ const LandingPage = () => {
       </div>
 
       {/* Logo */}
-      <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20">
+      <div className="absolute left-4 sm:left-4 z-20">
         <Image
-          src="/Pacelab.png"
+          src="/eventlogo.png"
           alt="PaceLab Logo"
-          width={100}
-          height={50}
-          className="w-24 sm:w-32 md:w-40 h-auto object-contain"
+          width={3600}
+          height={2100}
+          className="w-48 sm:w-56 md:w-72 h-auto object-contain"
         />
       </div>
 
