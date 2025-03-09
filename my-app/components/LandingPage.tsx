@@ -12,7 +12,7 @@ const LandingPage = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black to-black/40 z-10" />
         <Image
-          src="/robo.jpg"
+          src="/robot.jpg"
           alt="Background"
           fill
           className="object-cover object-center"
