@@ -110,7 +110,6 @@ const Section: React.FC<SectionProps> = ({
   imageSrc, 
   imageAlt, 
   gradient, 
-  glow, 
   reversed 
 }) => {
   return (

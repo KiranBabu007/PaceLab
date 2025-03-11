@@ -48,7 +48,7 @@ const LandingPage = () => {
           <div className="w-full max-w-3xl text-center -mt-16">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white">
               India&apos;s Largest{' '}
-              <span className="glowing text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-400 to-purple-800">
+              <span className="glowing text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-800">
                 Internship
               </span>{' '}
               Programme!
@@ -59,7 +59,7 @@ const LandingPage = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row items-center gap-14 justify-center">
             <ShinyButton className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 font-bold font-mono text-gray-800 border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20 relative overflow-hidden">
               Book your seats
             </ShinyButton>
