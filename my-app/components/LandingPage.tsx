@@ -41,11 +41,11 @@ const LandingPage = () => {
               alt="PaceLab Logo"
               width={3600}
               height={2100}
-              className="w-28 sm:w-56 md:w-96 h-auto object-contain"
+              className="w-28 sm:w-56 md:w-[32rem] h-auto object-contain"
             />
           </div>
           {/* Header */}
-          <div className="w-full max-w-3xl text-center -mt-10">
+          <div className="w-full max-w-3xl text-center -mt-16">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white">
               India&apos;s Largest{' '}
               <span className="glowing text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-400 to-purple-800">

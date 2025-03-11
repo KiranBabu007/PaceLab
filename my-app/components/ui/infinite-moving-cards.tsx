@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface Testimonial {
@@ -35,6 +36,16 @@ const InfiniteMovingCards: React.FC<Props> = ({ testimonials }) => {
                     className="flex-shrink-0 w-[450px] p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-purple-500/10 transition-all duration-300 hover:bg-white/20"
                   >
                     <blockquote className="relative">
+                      {/* Large Quote Mark */}
+                      <div className="z-10">
+                      <Image width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/quote-left.png" alt="quote-left"/>
+                    </div>
+                      
+                      <p className="text-lg leading-relaxed text-gray-200 mb-6 line-clamp-4 pt-4 pl-4">
+                        {item.quote}
+                      </p>
+                      
+                      {/* Rating Stars (moved below quote) */}
                       <div className="flex items-center mb-6">
                         {[...Array(5)].map((_, i) => (
                           <svg 
@@ -47,9 +58,7 @@ const InfiniteMovingCards: React.FC<Props> = ({ testimonials }) => {
                           </svg>
                         ))}
                       </div>
-                      <p className="text-lg leading-relaxed text-gray-200 mb-6 line-clamp-4">
-                        {item.quote}
-                      </p>
+                      
                       <div className="flex items-center">
                         <div>
                           <p className="text-base font-semibold text-purple-300">
