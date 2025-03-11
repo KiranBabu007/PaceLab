@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { SparklesCore } from './ui/sparkles';
 import { TracingBeam } from './ui/tracing-beam';
 import TestimonialsSection from './TestimonialsSection';
-import JobFair from './JobFair';
+
 
 const CertificationPage = () => {
   return (

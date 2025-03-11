@@ -3,8 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Spotlight } from './ui/spotlight';
 import { SparklesCore } from './ui/sparkles';
+import { Building2 } from 'lucide-react'; // Import the building icon
 
 const JobFair = () => {
   const companies = [
@@ -17,102 +17,105 @@ const JobFair = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-purple-950 via-black to-purple-950 text-white overflow-hidden py-20 z-20">
-      <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none z-20" />
-      <div className="absolute inset-0 flex items-center justify-center z-0">
+    <section className="relative min-h-screen bg-gradient-to-br from-purple-950 via-black to-purple-950 text-white overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10" />
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
           particleColor="#8B5CF6"
-          particleSize={2}
-          particleDensity={100}
-          className="w-full h-full opacity-80"
+          particleSize={1.5}
+          particleDensity={80}
+          className="w-full h-full opacity-50"
         />
       </div>
-     
-      
-      
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="purple" />
-        
-        {/* Header with paper plane icon */}
-        <div className="relative z-10 flex flex-col items-center justify-center mb-24">
+
+      {/* Gradient Beams */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -left-1/4 top-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute right-0 bottom-0 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl" />
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        {/* Header Section */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row items-center gap-6 mb-12"
+            className="flex items-center justify-center gap-2 mb-6"
           >
-            <div className="w-16 h-16 relative">
-              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white">
-                <path 
-                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" 
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-2 tracking-wider">
-                <span className="text-white ">
-                  JOBS & OPPORTUNITIES
-                </span>
-              </h2>
-            </div>
+            <Building2 className="w-6 h-6 text-purple-400" />
+            <span className="text-purple-400 text-sm font-medium tracking-wider uppercase">
+              Career Opportunities
+            </span>
           </motion.div>
-          
-          <motion.div
+
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="max-w-4xl text-center"
+            className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80"
           >
-            <p className="text-xl md:text-2xl leading-relaxed">
-              Our internship certifications have played a pivotal role in helping students gain
-              recognition from leading <span className="font-bold">Multinational Corporations (MNCs)</span>.
-            </p>
-          </motion.div>
+            Launch Your Career with Industry Leaders
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-300/90 leading-relaxed"
+          >
+            Our internship program opens doors to opportunities with leading multinational corporations,
+            helping you kickstart your professional journey.
+          </motion.p>
         </div>
-        
-        {/* Company Logos - Single White Banner */}
+
+        {/* Companies Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
-          className="relative z-10 mb-24"
+          className="relative"
         >
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="bg-white/95 rounded-2xl p-6 md:p-10 shadow-xl shadow-purple-500/10"
-          >
-            <div className="flex flex-wrap justify-around items-center gap-8 md:gap-12">
+          {/* Glass Container */}
+          <div className="relative backdrop-blur-xl bg-white/[0.02] border border-white/[0.05] rounded-2xl p-8 md:p-12">
+            {/* Grid of Company Logos */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12">
               {companies.map((company, index) => (
-                <motion.div 
+                <motion.div
                   key={company.name}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: 'easeOut'
+                  }}
                   whileHover={{ scale: 1.05 }}
-                  className="relative w-28 h-12 md:w-32 md:h-16"
+                  className="group relative aspect-[3/2] flex items-center justify-center"
                 >
-                  <Image
-                    src={company.logo}
-                    alt={`${company.name}`}
-                    fill
-                    className="object-contain"
-                  />
+                  <div className="relative w-full h-full p-4">
+                    <Image
+                      src={company.logo}
+                      alt={company.name}
+                      fill
+                      className="object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
