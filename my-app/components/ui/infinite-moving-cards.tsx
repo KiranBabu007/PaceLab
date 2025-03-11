@@ -17,7 +17,7 @@ const InfiniteMovingCards: React.FC<Props> = ({ testimonials }) => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           <div className="text-center">
-            <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl bg-gradient-to-r from-white via-purple-200 to-purple-400 text-transparent bg-clip-text drop-shadow-sm">
               Our Students Speak
             </h2>
           </div>
