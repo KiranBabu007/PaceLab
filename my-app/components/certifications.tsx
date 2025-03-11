@@ -165,8 +165,8 @@ const Section: React.FC<SectionProps> = ({
         >
           <Image
             src={imageSrc}
-            height={350}
-            width={350}
+            height={imageSrc.includes('music') ? 500 : 350}
+            width={imageSrc.includes('music') ? 500 : 350}
             alt={imageAlt}
             className="object-contain relative z-10 rounded-lg"
             priority
