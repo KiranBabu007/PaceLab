@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Spotlight } from './ui/spotlight';
+import { SparklesCore } from './ui/sparkles';
 
 const JobFair = () => {
   const companies = [
@@ -16,10 +17,21 @@ const JobFair = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-bl from-purple-950 via-black to-purple-950 text-white overflow-hidden py-20">
-      {/* Background Effects */}
+    <div className="relative min-h-screen bg-gradient-to-br from-purple-950 via-black to-purple-950 text-white overflow-hidden py-20 z-20">
+      <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none z-20" />
+      <div className="absolute inset-0 flex items-center justify-center z-0">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          particleColor="#8B5CF6"
+          particleSize={2}
+          particleDensity={100}
+          className="w-full h-full opacity-80"
+        />
+      </div>
      
-      <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none" />
+      
+      
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="purple" />

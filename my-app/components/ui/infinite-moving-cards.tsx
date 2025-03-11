@@ -64,9 +64,7 @@ const InfiniteMovingCards: React.FC<Props> = ({ testimonials }) => {
                           <p className="text-base font-semibold text-purple-300">
                             {item.name}
                           </p>
-                          <p className="mt-0.5 text-sm text-gray-400">
-                            {item.title}
-                          </p>
+                         
                         </div>
                       </div>
                     </blockquote>
