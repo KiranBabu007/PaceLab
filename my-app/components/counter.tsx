@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
-const TOTAL_BOOKINGS = Math.floor(Math.random() * (15000 - 10000 + 1)) + 10000; // Random number between 10000 and 15000
+const TOTAL_BOOKINGS = 10363; // Fixed number instead of random
 const ANIMATION_DURATION = 2000 // 2 seconds
 
 export default function StudentEnrollmentCounter() {
@@ -41,13 +41,13 @@ export default function StudentEnrollmentCounter() {
   return (
     <div className="p-4 text-center flex flex-col items-center justify-center">
       <div className="flex items-baseline">
-        <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
+        <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
           from-white/90 
           via-purple-200 
           to-white/90 tabular-nums">
           {count.toLocaleString()}
         </span>
-        <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
+        <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
           from-white/90 to-purple-200 ml-1">
           +
         </span>

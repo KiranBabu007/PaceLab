@@ -9,22 +9,18 @@ import {
 import { cn } from "@/lib/utils";
 
 const animationProps = {
-  initial: { "--x": "100%", scale: 0.8 },
+  initial: { "--x": "100%", scale: 1 }, // Removed initial scale animation
   animate: { "--x": "-100%", scale: 1 },
-  whileTap: { scale: 0.95 },
+  whileTap: { scale: 0.98 }, // Subtle scale on tap
   transition: {
     repeat: Infinity,
     repeatType: "loop",
-    repeatDelay: 1,
-    type: "spring",
-    stiffness: 20,
-    damping: 15,
-    mass: 2,
+    duration: 1.5, // Added fixed duration
+    ease: "linear", // Linear animation for smooth shine effect
     scale: {
       type: "spring",
       stiffness: 200,
-      damping: 5,
-      mass: 0.5,
+      damping: 10,
     },
   },
 } as AnimationProps;
