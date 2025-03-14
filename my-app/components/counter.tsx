@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
-const TOTAL_BOOKINGS = 10000
+const TOTAL_BOOKINGS = Math.floor(Math.random() * (15000 - 10000 + 1)) + 10000; // Random number between 10000 and 15000
 const ANIMATION_DURATION = 2000 // 2 seconds
 
 export default function StudentEnrollmentCounter() {
@@ -39,25 +39,25 @@ export default function StudentEnrollmentCounter() {
   }, [animateValue])
 
   return (
-    <div className="p-4 text-center flex flex-col items-center justify-center shadow-md rounded-lg bg-gradient-to-b from-gray-50 to-gray-100 border border-gray-200">
+    <div className="p-4 text-center flex flex-col items-center justify-center">
       <div className="flex items-baseline">
         <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
-          from-gray-400 
-          via-gray-600 
-          to-gray-500 tabular-nums">
+          from-white/90 
+          via-purple-200 
+          to-white/90 tabular-nums">
           {count.toLocaleString()}
         </span>
         <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
-          from-gray-400 to-gray-500 ml-1">
+          from-white/90 to-purple-200 ml-1">
           +
         </span>
       </div>
       
       <div className="flex flex-col items-center">
-        <span className="text-sm font-semibold text-gray-700">
+        <span className="text-sm font-semibold text-white/90">
           Students Enrolled
         </span>
-        <div className={`text-xs text-gray-500 transition-opacity duration-500 ${isAnimationComplete ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`text-xs text-purple-200 transition-opacity duration-500 ${isAnimationComplete ? 'opacity-100' : 'opacity-0'}`}>
           Join our community today!
         </div>
       </div>

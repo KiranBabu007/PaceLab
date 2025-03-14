@@ -21,7 +21,7 @@ const LandingPage = () => {
       </div>
 
       {/* Logo */}
-      <div className="absolute left-8 top-8 sm:left-8 z-20">
+      <div className="absolute left-10 top-10 sm:left-10 z-20">
         <Image
           src="/Pacelab.png"
           alt="PaceLab Logo"
