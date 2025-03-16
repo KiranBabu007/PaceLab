@@ -2,7 +2,6 @@
 
 import React from 'react';
 import BookingCounter from './counter';
-import ShinyButton from "@/components/ui/shiny-button";
 import Image from 'next/image';
 import { Calendar } from 'lucide-react';
 import Link from 'next/link';
@@ -56,7 +55,7 @@ const LandingPage = () => {
               Programme!
             </h1>
             <p className="mt-4 text-gray-300 text-xs sm:text-base lg:text-lg font-mono px-4 sm:px-0"> {/* Added padding on mobile */}
-              Join thousands of students in India&apos;s premier internship program and kickstart your career journey today.
+              Join thousands of students in India&apos;s premier internship event and kickstart your career journey today.
             </p>
           </div>
 
