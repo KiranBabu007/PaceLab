@@ -4,6 +4,8 @@ import React from 'react';
 import BookingCounter from './counter';
 import ShinyButton from "@/components/ui/shiny-button";
 import Image from 'next/image';
+import { Calendar } from 'lucide-react';
+import Link from 'next/link';
 
 const LandingPage = () => {
   return (
@@ -60,12 +62,29 @@ const LandingPage = () => {
 
           {/* CTA Section */}
           <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-14 justify-center mt-8 sm:mt-0">
-            <ShinyButton
-              className="w-[80%] sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 font-bold font-mono text-gray-800 border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20 relative overflow-hidden text-sm sm:text-base"
-              onClick={() => window.open('http://bit.ly/paceintern25', '_blank')}
+            <Link 
+              href="http://bit.ly/paceintern25" 
+              target="_blank" 
+              className="group relative overflow-hidden rounded-lg px-6 py-3 
+                bg-gradient-to-r from-purple-700 via-fuchsia-700 to-purple-900
+                hover:from-purple-600 hover:via-fuchsia-600 hover:to-purple-800
+                transform hover:scale-105 active:scale-95
+                transition-all duration-300 ease-out
+                shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40
+                border border-purple-800/20
+                text-white font-mono tacking-wide font-semibold "
             >
-              Book your seats
-            </ShinyButton>
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/10 to-transparent 
+                group-hover:via-purple-400/20 translate-x-[-100%] group-hover:translate-x-[100%] 
+                transition-transform duration-1000 ease-in-out" 
+              />
+              <span className="relative flex items-center gap-2">
+                <Calendar className="w-4 h-4  animate-pulse" />
+                <span className="bg-gradient-to-r from-pink-200 via-white to-purple-200 bg-clip-text text-transparent">
+                  Book Your Seats
+                </span>
+              </span>
+            </Link>
             <div className="w-auto">
               <BookingCounter />
             </div>
