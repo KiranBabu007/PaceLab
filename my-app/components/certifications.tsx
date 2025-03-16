@@ -59,8 +59,8 @@ const CertificationPage = () => {
           {/* Music Fest Section */}
           <Section
             title="Music Fest"
-            subtitle="2024"
-            description="Music Fest 2024 brought together artists and music lovers from across Kerala in Kochi on July 11, 2024. From mesmerizing performances to spontaneous jam sessions, the festival celebrated the unifying power of music."
+            subtitle="2025"
+            description="Music Fest 2025 will bring together artists and music lovers from across Kerala in Kochi this June. From mesmerizing performances to spontaneous jam sessions, the festival will celebrate the unifying power of music in an unforgettable experience."
             imageSrc="/music.png"
             imageAlt="Music Festival"
             gradient="from-pink-400 via-fuchsia-400 to-pink-600"
