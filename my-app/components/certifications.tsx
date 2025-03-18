@@ -46,9 +46,10 @@ const CertificationPage = () => {
 
           {/* IIT Section */}
           <Section
-            title="IIT Bombay and Hyderabad"
+            title="IIT Bombay & Hyderabad"
+            
             subtitle="Certification"
-            description="Elevate your career with internationally recognized certification from IIT Bombay. Our partnership with India's premier technology institute ensures world-class curriculum standards."
+            description="Elevate your career with internationally recognized certification from IIT Bombay and IIT Hyderabad. Our partnership with India's premier technology institute ensures world-class curriculum standards."
             imageSrc="/certificate1.png"
             imageAlt="IIT Certification"
             gradient="from-amber-400 via-yellow-400 to-amber-600"

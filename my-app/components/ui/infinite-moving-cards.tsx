@@ -30,7 +30,7 @@ const InfiniteMovingCards: React.FC<Props> = ({ testimonials }) => {
             {/* Sliding Container */}
             <div className="flex gap-8 overflow-hidden">
               <div className="flex animate-scroll hover:pause gap-8 min-w-full">
-                {[...testimonials, ...testimonials, ...testimonials,...testimonials].map((item, idx) => (
+                {[...testimonials,...testimonials,...testimonials,...testimonials, ...testimonials, ...testimonials,...testimonials].map((item, idx) => (
                   <div 
                     key={idx} 
                     className="flex-shrink-0 w-[450px] p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-purple-500/10 transition-all duration-300 hover:bg-white/20"
