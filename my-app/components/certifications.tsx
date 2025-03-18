@@ -47,7 +47,7 @@ const CertificationPage = () => {
           {/* IIT Section */}
           <Section
             title="IIT "
-            subtitle="Certification"
+            subtitle="Bombay,Hyderabad Certification"
             description="Elevate your career with internationally recognized certification from IIT Bombay. Our partnership with India's premier technology institute ensures world-class curriculum standards."
             imageSrc="/certificate1.png"
             imageAlt="IIT Certification"
@@ -78,6 +78,18 @@ const CertificationPage = () => {
             gradient="from-cyan-400 via-blue-400 to-cyan-600"
             glow="rgba(6,182,212,0.7)"
             reversed={true}
+          />
+
+          {/* Job Networking Portal Section */}
+          <Section
+            title="Job Networking"
+            subtitle="Portal"
+            description="Connect with top companies, expand your professional network, and land your dream job effortlessly. Our AI-powered platform matches you with opportunities that align with your skills and career goals."
+            imageSrc="/job.png"
+            imageAlt="Job Networking"
+            gradient="from-emerald-400 via-green-400 to-emerald-600"
+            glow="rgba(16,185,129,0.5)"
+            reversed={false}
           />
         </div>
       </TracingBeam>
