@@ -14,6 +14,8 @@ const JobFair = () => {
     { name: "TCS", logo: "/tcs.png" },
     { name: "Accenture", logo: "/acc.png" },
     { name: "EY", logo: "/ey.png" },
+    { name: "Amazon", logo: "/amazon.png" },
+    { name: "AWS", logo: "/aws.png" }
   ];
 
   return (
@@ -87,7 +89,7 @@ const JobFair = () => {
           {/* Glass Container */}
           <div className="relative backdrop-blur-xl bg-white/[0.02] border border-white/[0.05] rounded-2xl p-8 md:p-12">
             {/* Grid of Company Logos */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 md:gap-12 justify-center">
               {companies.map((company, index) => (
                 <motion.div
                   key={company.name}
