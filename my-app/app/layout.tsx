@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: "/paclab.png", // Favicon added here
+  },
 };
 
 export default function RootLayout({
@@ -38,6 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/paclab.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
