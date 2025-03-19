@@ -15,7 +15,7 @@ const CertificationPage = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none" />
-        <div className="hidden lg:block"> {/* Only show SparklesCore on desktop */}
+        <div className="hidden md:block"> {/* Only show SparklesCore on desktop */}
           <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
