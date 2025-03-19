@@ -83,7 +83,7 @@ const CertificationPage = () => {
           <Section
             title="Job Networking"
             subtitle="Portal"
-            description="Connect with top companies, expand your professional network, and land your dream job effortlessly. Our AI-powered platform matches you with opportunities that align with your skills and career goals."
+            description="Connect with top companies, expand your professional network, and land your dream job effortlessly. We matches you with opportunities that align with your skills and career goals."
             imageSrc="/job.png"
             imageAlt="Job Networking"
             gradient="from-emerald-400 via-green-400 to-emerald-600"
