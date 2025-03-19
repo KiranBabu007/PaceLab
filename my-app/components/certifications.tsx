@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SparklesCore } from './ui/sparkles';
 import { TracingBeam } from './ui/tracing-beam';
-import { Spotlight } from "./ui/spotlight";
+
 import TestimonialsSection from './TestimonialsSection';
 
 const CertificationPage = () => {
@@ -23,14 +23,77 @@ const CertificationPage = () => {
           particleDensity={100}
           className="w-full h-full opacity-50"
         />
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="white"
-        />
+        
       </div>
 
       {/* Main Content */}
-      <TracingBeam className="w-full">
+      <div className="block sm:hidden w-full"> {/* Mobile view without TracingBeam */}
+        <div className="w-full max-w-[1440px] mx-auto px-8 relative z-10 space-y-16">
+          {/* NFT Section */}
+          <Section
+            title="NFT Blockchain"
+            subtitle="Certification"
+            description="Experience the future of credentials with our NFT-backed certifications. Each certificate is uniquely minted on the blockchain, providing tamper-proof verification and exclusive digital ownership."
+            imageSrc="/NFT.gif"
+            imageAlt="NFT Animation"
+            gradient="from-purple-400 via-violet-400 to-purple-600"
+            glow="rgba(168,85,247,0.5)"
+            reversed={false}
+          />
+
+          {/* IIT Section */}
+          <Section
+            title="IIT Bombay & Hyderabad"
+            
+            subtitle="Certification"
+            description="Elevate your career with internationally recognized certification from IIT Bombay and IIT Hyderabad. Our partnership with India's premier technology institute ensures world-class curriculum standards."
+            imageSrc="/certificate1.png"
+            imageAlt="IIT Certification"
+            gradient="from-amber-400 via-yellow-400 to-amber-600"
+            glow="rgba(251,191,36,0.5)"
+            reversed={true}
+          />
+
+          {/* Music Fest Section */}
+          <Section
+            title="Music Fest"
+            subtitle="2025"
+            description="Music Fest 2025 will bring together artists and music lovers from across Kerala in Kochi this June. From mesmerizing performances to spontaneous jam sessions, the festival will celebrate the unifying power of music in an unforgettable experience."
+            imageSrc="/music.png"
+            imageAlt="Music Festival"
+            gradient="from-pink-400 via-fuchsia-400 to-pink-600"
+            glow="rgba(236,72,153,0.5)"
+            reversed={false}
+          />
+
+          {/* VR Section */}
+          <Section
+            title="VR & Metaverse"
+            subtitle="Experience"
+            description="Experience VR and AR firsthand with our technology demonstration event, where fun meets technology. Dive into virtual worlds, from Jurassic adventures to space exploration aboard the ISS."
+            imageSrc="/VR.png"
+            imageAlt="VR Headset"
+            gradient="from-cyan-400 via-blue-400 to-cyan-600"
+            glow="rgba(6,182,212,0.7)"
+            reversed={true}
+          />
+
+          {/* Job Networking Portal Section */}
+          <Section
+            title="Job Networking"
+            subtitle="Portal"
+            description="Connect with top companies, expand your professional network, and land your dream job effortlessly. Our AI-powered platform matches you with opportunities that align with your skills and career goals."
+            imageSrc="/job.png"
+            imageAlt="Job Networking"
+            gradient="from-emerald-400 via-green-400 to-emerald-600"
+            glow="rgba(16,185,129,0.5)"
+            reversed={false}
+          />
+        </div>
+      </div>
+
+      {/* Desktop view with TracingBeam */}
+      <TracingBeam className="hidden sm:block w-full">
         <div className="w-full max-w-[1440px] mx-auto px-8 relative z-10 space-y-16 sm:space-y-32">
           {/* NFT Section */}
           <Section
