@@ -68,13 +68,14 @@ const Footer = () => {
             <h3 className="text-purple-400 font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="text-gray-400/80 text-sm">
-                Kerala, India
+                Panampilly,<br />
+                Ernakulam, Kerala
               </li>
               <li className="text-gray-400/80 text-sm">
                 info@pacelab.in
               </li>
               <li className="text-gray-400/80 text-sm">
-                +91 123-456-7890
+                +91 8075090098
               </li>
             </ul>
           </div>
