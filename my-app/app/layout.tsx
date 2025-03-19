@@ -22,8 +22,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://internship.pacelab.in/eventlogo.png",// Optional
+        url: "https://internship.pacelab.in/thumbnail.png",// Optional
         alt: "Event Logo",
+        height:"2100",
+        width:"3600"
       },
     ],
   },
