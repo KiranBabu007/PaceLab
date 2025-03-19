@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="pt-20"
+      className="pt-8"
     >
       <InfiniteMovingCards testimonials={testimonials} />
     </motion.div>

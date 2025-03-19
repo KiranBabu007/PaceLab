@@ -10,7 +10,7 @@ import TestimonialsSection from './TestimonialsSection';
 
 const CertificationPage = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-bl from-violet-950 via-black to-purple-950 text-white py-16 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-bl from-violet-950 via-black to-purple-950 text-white py-8 sm:py-16 overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/50" />
@@ -31,7 +31,7 @@ const CertificationPage = () => {
 
       {/* Main Content */}
       <TracingBeam className="w-full">
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-32">
+        <div className="w-full max-w-[1440px] mx-auto px-8 relative z-10 space-y-16 sm:space-y-32">
           {/* NFT Section */}
           <Section
             title="NFT Blockchain"
@@ -96,7 +96,7 @@ const CertificationPage = () => {
       </TracingBeam>
       
       {/* Testimonials with enhanced spacing */}
-      <div className="mt-32"> 
+      <div className="mt-16 sm:mt-32"> 
         <TestimonialsSection />
       </div>
     </div>
@@ -127,60 +127,64 @@ const Section: React.FC<SectionProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-      className={`flex flex-col ${reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center justify-between gap-8 md:gap-12 lg:gap-20`}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`flex flex-col ${reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center justify-between gap-8 md:gap-12 lg:gap-20 py-4 sm:py-8`}
     >
       {/* Content */}
       <motion.div
-        initial={{ opacity: 0, x: reversed ? 40 : -40 }}
+        initial={{ opacity: 0, x: reversed ? 20 : -20 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="lg:w-1/2 space-y-8"
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="lg:w-1/2 space-y-4 sm:space-y-8"
       >
-        <div className="space-y-2">
-          <h2 className="text-4xl lg:text-6xl font-bold tracking-tight">
+        <div className="space-y-2 sm:space-y-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight">
             <span className={`text-transparent bg-clip-text bg-gradient-to-r ${gradient}`}>
               {title}
             </span>
           </h2>
-          <h2 className="text-4xl lg:text-6xl font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight">
             {subtitle}
           </h2>
         </div>
         
-        <p className="text-gray-300 text-lg leading-relaxed font-mono">
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-mono px-2 sm:px-0">
           {description}
         </p>
 
         
       </motion.div>
 
-      {/* Image - Removed circular glows */}
+      {/* Image with optimized animations */}
       <motion.div
-        initial={{ opacity: 0, x: reversed ? -40 : 40 }}
+        initial={{ opacity: 0, x: reversed ? -20 : 20 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="lg:w-1/2 relative"
-        whileHover={{ scale: 1.02, rotate: reversed ? -1 : 1 }}
-        whileTap={{ scale: 0.98 }}
+        whileHover={{ scale: 1.01 }}
+        whileTap={{ scale: 0.99 }}
       >
         <motion.div
           className="relative w-full aspect-square max-w-md mx-auto flex justify-center items-center"
-          initial={{ y: 0 }}
-          animate={{ y: [0, -10, 0] }}
-          transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+          animate={{ y: [0, -5, 0] }}
+          transition={{ 
+            repeat: Infinity, 
+            duration: 4, 
+            ease: "easeInOut",
+            times: [0, 0.5, 1] 
+          }}
         >
           <Image
             src={imageSrc}
             height={imageSrc.includes('music') ? 500 : 350}
             width={imageSrc.includes('music') ? 500 : 350}
             alt={imageAlt}
-            className="object-contain relative z-10 rounded-lg"
+            className="object-contain relative z-10 rounded-lg p-4 sm:p-0"
             priority
           />
         </motion.div>
