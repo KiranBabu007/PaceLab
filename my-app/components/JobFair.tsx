@@ -108,7 +108,10 @@ const JobFair = () => {
                       src={company.logo}
                       alt={company.name}
                       fill
-                      className="object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      className={`object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-300 ${
+                        company.name === "TCS" ? "scale-75" : 
+                        company.name === "Amazon" ? "scale-125" : ""
+                      }`}
                     />
                   </div>
                 </motion.div>
