@@ -84,7 +84,7 @@ const Footer = () => {
           <div>
             <h3 className="text-purple-400 font-semibold mb-4">Join Us</h3>
             <Link 
-              href="http://bit.ly/paceintern25" 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfM_rEeKhPbbZ78bncOXU2wL_zEM4WdkWT8YxeJd744Hw7KAw/viewform" 
               target="_blank"
               className="bg-gradient-to-r from-purple-800 to-violet-900 hover:from-purple-900 hover:to-violet-950 text-white font-medium py-2 px-4 rounded-lg inline-flex items-center gap-2 transition-all duration-300 shadow-lg shadow-purple-950/50"
             >

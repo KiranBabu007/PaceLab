@@ -62,7 +62,7 @@ const LandingPage = () => {
           {/* CTA Section */}
           <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-14 justify-center mt-8 sm:mt-0">
             <Link 
-              href="http://bit.ly/paceintern25" 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfM_rEeKhPbbZ78bncOXU2wL_zEM4WdkWT8YxeJd744Hw7KAw/viewform" 
               target="_blank" 
               className="group relative overflow-hidden rounded-lg px-6 py-3 
                 bg-gradient-to-r from-purple-700 via-fuchsia-700 to-purple-900
