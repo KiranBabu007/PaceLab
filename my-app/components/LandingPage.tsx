@@ -1,16 +1,17 @@
 'use client';
 
+// Place this at the top, before imports
+declare global {
+  interface Window {
+    gtag?: (command: 'event' | 'config' | 'js', eventNameOrId: string, params?: Record<string, unknown>) => void;
+  }
+}
+
 import React from 'react';
 import BookingCounter from './counter';
 import Image from 'next/image';
 import { Calendar } from 'lucide-react';
 import Link from 'next/link';
-
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
 
 const LandingPage = () => {
   return (
