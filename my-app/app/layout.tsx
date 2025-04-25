@@ -43,6 +43,20 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/png" href="/paclab.png" />
+        <head>
+  {/* ...existing code... */}
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-EW44YVSMBK`}></script>
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EW44YVSMBK');
+      `,
+    }}
+  />
+</head>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

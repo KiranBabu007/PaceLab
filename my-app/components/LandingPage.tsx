@@ -6,6 +6,12 @@ import Image from 'next/image';
 import { Calendar } from 'lucide-react';
 import Link from 'next/link';
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 const LandingPage = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -64,6 +70,14 @@ const LandingPage = () => {
             <Link 
               href="https://docs.google.com/forms/d/e/1FAIpQLSfM_rEeKhPbbZ78bncOXU2wL_zEM4WdkWT8YxeJd744Hw7KAw/viewform" 
               target="_blank" 
+              onClick={() => {
+                if (typeof window !== "undefined" && window.gtag) {
+                  window.gtag('event', 'click', {
+                    event_category: 'CTA',
+                    event_label: 'Book Your Seats',
+                  });
+                }
+              }}
               className="group relative overflow-hidden rounded-lg px-6 py-3 
                 bg-gradient-to-r from-purple-700 via-fuchsia-700 to-purple-900
                 hover:from-purple-600 hover:via-fuchsia-600 hover:to-purple-800
