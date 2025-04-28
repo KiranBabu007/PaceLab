@@ -45,14 +45,14 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/paclab.png" />
         <head>
   {/* ...existing code... */}
-  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-EW44YVSMBK`}></script>
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-F6XRLEJGP4`}></script>
   <script
     dangerouslySetInnerHTML={{
       __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-EW44YVSMBK');
+        gtag('config', 'G-F6XRLEJGP4');
       `,
     }}
   />
