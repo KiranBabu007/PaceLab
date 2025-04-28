@@ -22,7 +22,7 @@ const CertificationPage = () => {
             particleColor="#8B5CF6"
             particleSize={2}
             particleDensity={100}
-            className="w-full h-full opacity-50"
+            className="w-full h-[300rem] opacity-50"
           />
         </div>
       </div>
