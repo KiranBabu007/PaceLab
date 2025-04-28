@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Script from 'next/script'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,23 +43,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-<head>
-  <link rel="icon" type="image/png" href="/paclab.png" />
-  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-F6XRLEJGP4`}></script>
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-F6XRLEJGP4');
-      `,
-    }}
-  />
-</head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link rel="icon" type="image/png" href="/paclab.png" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-F6XRLEJGP4`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F6XRLEJGP4');
+          `}
+        </Script>
         {children}
       </body>
     </html>
