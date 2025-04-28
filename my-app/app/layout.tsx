@@ -41,10 +41,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/png" href="/paclab.png" />
-        <head>
-  {/* ...existing code... */}
+<head>
+  <link rel="icon" type="image/png" href="/paclab.png" />
   <script async src={`https://www.googletagmanager.com/gtag/js?id=G-F6XRLEJGP4`}></script>
   <script
     dangerouslySetInnerHTML={{
@@ -57,7 +55,6 @@ export default function RootLayout({
     }}
   />
 </head>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
