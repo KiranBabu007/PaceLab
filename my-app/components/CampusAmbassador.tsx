@@ -1,6 +1,6 @@
 // pages/campus-ambassador.js
 import Head from 'next/head';
-import Image from 'next/image';
+
 
 export default function CampusAmbassador() {
   return (
@@ -28,7 +28,7 @@ export default function CampusAmbassador() {
             Become the Voice of <span className="text-[#8a65ff]">PaceLab</span> on Your Campus
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Join India's most dedicated Campus Ambassador Program and kickstart your journey to leadership,
+            Join India&apos;s most dedicated Campus Ambassador Program and kickstart your journey to leadership,
             networking, and professional growth.
           </p>
         </div>
