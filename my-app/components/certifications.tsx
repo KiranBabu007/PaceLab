@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SparklesCore } from './ui/sparkles';
 import { TracingBeam } from './ui/tracing-beam';
+import Link from 'next/link';
 
 import TestimonialsSection from './TestimonialsSection';
 
@@ -190,13 +191,23 @@ const Section: React.FC<SectionProps> = ({
         </p>
 
         {buttonText && (
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-purple-500 to-violet-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
-          >
-            {buttonText}
-          </motion.button>
+          <Link href="https://pacelabca.vercel.app/Index.html" target="_blank">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                if (typeof window !== "undefined" && window.gtag) {
+                  window.gtag('event', 'click', {
+                    event_category: 'CTA',
+                    event_label: 'Campus Ambassador Apply Now',
+                  });
+                }
+              }}
+              className="bg-gradient-to-r from-purple-500 to-violet-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
+            >
+              {buttonText}
+            </motion.button>
+          </Link>
         )}
         
       </motion.div>
