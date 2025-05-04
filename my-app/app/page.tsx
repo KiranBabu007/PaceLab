@@ -9,7 +9,6 @@ export default function Home() {
     <main>
       <LandingPage />
       <CertificationPage />
-      <CampusAmbassador />
       <JobFair />
       <Footer />
     </main>

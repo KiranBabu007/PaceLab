@@ -45,7 +45,6 @@ const CertificationPage = () => {
           {/* IIT Section */}
           <Section
             title="IIT Bombay & Hyderabad"
-            
             subtitle="Certification"
             description="Elevate your career with internationally recognized certification from IIT Bombay and IIT Hyderabad. Our partnership with India's premier technology institute ensures world-class curriculum standards."
             imageSrc="/certificate1.png"
@@ -53,6 +52,20 @@ const CertificationPage = () => {
             gradient="from-amber-400 via-yellow-400 to-amber-600"
             glow="rgba(251,191,36,0.5)"
             reversed={true}
+          />
+
+          {/* Campus Ambassador Section */}
+          <Section
+            title="Campus Ambassador"
+            subtitle="Program"
+            description="Join India&apos;s most dedicated Campus Ambassador Program at PaceLab! With a prize pool of ₹5 Lakhs, build your network while earning Internship & Appreciation Certificates."
+            imageSrc="/campus.png"
+            imageAlt="Campus Ambassador"
+            gradient="from-green-400 to-green-600"
+            glow="rgba(99,102,241,0.5)"
+            reversed={false}
+            buttonText="Apply Now"
+            highlightText='₹5 Lakhs Prize Pool'
           />
 
           {/* Music Fest Section */}
@@ -64,7 +77,7 @@ const CertificationPage = () => {
             imageAlt="Music Festival"
             gradient="from-pink-400 via-fuchsia-400 to-pink-600"
             glow="rgba(236,72,153,0.5)"
-            reversed={false}
+            reversed={true}
           />
 
           {/* VR Section */}
@@ -76,7 +89,7 @@ const CertificationPage = () => {
             imageAlt="VR Headset"
             gradient="from-cyan-400 via-blue-400 to-cyan-600"
             glow="rgba(6,182,212,0.7)"
-            reversed={true}
+            reversed={false}
           />
 
           {/* Job Networking Portal Section */}
@@ -88,7 +101,7 @@ const CertificationPage = () => {
             imageAlt="Job Networking"
             gradient="from-emerald-400 via-green-400 to-emerald-600"
             glow="rgba(16,185,129,0.5)"
-            reversed={false}
+            reversed={true}
           />
         </div>
       </TracingBeam>
@@ -111,6 +124,8 @@ interface SectionProps {
   gradient: string;
   glow: string;
   reversed: boolean;
+  buttonText?: string;
+  highlightText?: string;
 }
 
 // Update the Section component with TypeScript types
@@ -121,7 +136,9 @@ const Section: React.FC<SectionProps> = ({
   imageSrc, 
   imageAlt, 
   gradient, 
-  reversed 
+  reversed,
+  buttonText,
+  highlightText
 }) => {
   return (
     <motion.div
@@ -148,12 +165,39 @@ const Section: React.FC<SectionProps> = ({
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight">
             {subtitle}
           </h2>
+          {highlightText && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ 
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+                delay: 0.2
+              }}
+            >
+              <div className="mt-2 sm:mt-4 inline-block bg-gradient-to-r from-blue-600 to-purple-500 px-4 py-2 rounded-full shadow-lg">
+                <span className="text-md sm:text-xl font-bold">
+                  {highlightText}
+                </span>
+              </div>
+            </motion.div>
+          )}
         </div>
         
         <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-mono px-2 sm:px-0">
           {description}
         </p>
 
+        {buttonText && (
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-to-r from-purple-500 to-violet-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
+          >
+            {buttonText}
+          </motion.button>
+        )}
         
       </motion.div>
 
