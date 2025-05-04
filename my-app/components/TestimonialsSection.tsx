@@ -16,6 +16,8 @@ const TestimonialsSection = () => {
     >
       <InfiniteMovingCards testimonials={testimonials} />
     </motion.div>
+
+    
   );
 };
 
