@@ -55,19 +55,8 @@ const CertificationPage = () => {
             reversed={true}
           />
 
-          {/* Campus Ambassador Section */}
-          <Section
-            title="Campus Ambassador"
-            subtitle="Program"
-            description="Join India&apos;s most dedicated Campus Ambassador Program at PaceLab! With a prize pool of ₹5 Lakhs, build your network while earning Internship & Appreciation Certificates."
-            imageSrc="/campus.png"
-            imageAlt="Campus Ambassador"
-            gradient="from-green-400 to-green-600"
-            glow="rgba(99,102,241,0.5)"
-            reversed={false}
-            buttonText="Apply Now"
-            highlightText='₹5 Lakhs Prize Pool'
-          />
+          
+         
 
           {/* Music Fest Section */}
           <Section
@@ -103,6 +92,19 @@ const CertificationPage = () => {
             gradient="from-emerald-400 via-green-400 to-emerald-600"
             glow="rgba(16,185,129,0.5)"
             reversed={true}
+          />
+
+<Section
+            title="Campus Ambassador"
+            subtitle="Program"
+            description="Join India&apos;s most dedicated Campus Ambassador Program at PaceLab! With a prize pool of ₹5 Lakhs, build your network while earning Internship & Appreciation Certificates."
+            imageSrc="/campus.png"
+            imageAlt="Campus Ambassador"
+            gradient="from-amber-400 via-yellow-400 to-amber-600"
+            glow="rgba(99,102,241,0.5)"
+            reversed={false}
+            buttonText="Apply Now"
+            highlightText='₹5 Lakhs Prize Pool'
           />
         </div>
       </TracingBeam>
