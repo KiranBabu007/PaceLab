@@ -193,7 +193,7 @@ const Section: React.FC<SectionProps> = ({
         </p>
 
         {buttonText && (
-          <Link href="https://pacelabca.vercel.app/Index.html" target="_blank">
+          <Link href="https://forms.gle/98xdCddBNZnPjrdw6" target="_blank">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
