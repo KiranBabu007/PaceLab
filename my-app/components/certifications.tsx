@@ -55,9 +55,6 @@ const CertificationPage = () => {
             reversed={true}
           />
 
-          
-         
-
           {/* Music Fest Section */}
           <Section
             title="Music Fest"
@@ -94,7 +91,7 @@ const CertificationPage = () => {
             reversed={true}
           />
 
-<Section
+          <Section
             title="Campus Ambassador"
             subtitle="Program"
             description="Join India&apos;s most dedicated Campus Ambassador Program at PaceLab! With a prize pool of ₹5 Lakhs, build your network while earning Internship & Appreciation Certificates."
@@ -105,6 +102,7 @@ const CertificationPage = () => {
             reversed={false}
             buttonText="Apply Now"
             highlightText='₹5 Lakhs Prize Pool'
+            scoreboardLink="https://pacelabca.vercel.app/Index.html"
           />
         </div>
       </TracingBeam>
@@ -129,6 +127,7 @@ interface SectionProps {
   reversed: boolean;
   buttonText?: string;
   highlightText?: string;
+  scoreboardLink?: string;
 }
 
 // Update the Section component with TypeScript types
@@ -141,7 +140,8 @@ const Section: React.FC<SectionProps> = ({
   gradient, 
   reversed,
   buttonText,
-  highlightText
+  highlightText,
+  scoreboardLink
 }) => {
   return (
     <motion.div
@@ -193,23 +193,45 @@ const Section: React.FC<SectionProps> = ({
         </p>
 
         {buttonText && (
-          <Link href="https://forms.gle/98xdCddBNZnPjrdw6" target="_blank">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                if (typeof window !== "undefined" && window.gtag) {
-                  window.gtag('event', 'click', {
-                    event_category: 'CTA',
-                    event_label: 'Campus Ambassador Apply Now',
-                  });
-                }
-              }}
-              className="bg-gradient-to-r from-purple-500 to-violet-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
-            >
-              {buttonText}
-            </motion.button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="https://forms.gle/98xdCddBNZnPjrdw6" target="_blank">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  if (typeof window !== "undefined" && window.gtag) {
+                    window.gtag('event', 'click', {
+                      event_category: 'CTA',
+                      event_label: 'Campus Ambassador Apply Now',
+                    });
+                  }
+                }}
+                className="bg-gradient-to-r from-purple-500 to-violet-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
+              >
+                {buttonText}
+              </motion.button>
+            </Link>
+            
+            {scoreboardLink && (
+              <Link href={scoreboardLink} target="_blank">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    if (typeof window !== "undefined" && window.gtag) {
+                      window.gtag('event', 'click', {
+                        event_category: 'CTA',
+                        event_label: 'View Scoreboard',
+                      });
+                    }
+                  }}
+                  className="bg-gradient-to-r from-purple-500 to-violet-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 mt-4"
+                >
+                  View Scoreboard
+                </motion.button>
+              </Link>
+            )}
+          </div>
         )}
         
       </motion.div>
