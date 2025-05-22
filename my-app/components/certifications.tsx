@@ -102,7 +102,7 @@ const CertificationPage = () => {
             reversed={false}
             buttonText="Apply Now"
             highlightText='₹5 Lakhs Prize Pool'
-            scoreboardLink="https://pacelabca.vercel.app/Index.html"
+            scoreboardLink="https://capacalab.replit.app/"
           />
         </div>
       </TracingBeam>
